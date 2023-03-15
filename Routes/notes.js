@@ -69,7 +69,7 @@ router.put('/updatenote/:id', fetchUser, async (req, res) => {
   if (!note) {
     res.status(404).send('Not Found');
   }
-  if (note._id.toString() !== req.user.id) {
+  if (note._id !== req.user.id) {
     res.status(401).send('Not Allowed');
   }
 
