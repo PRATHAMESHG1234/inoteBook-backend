@@ -1,14 +1,14 @@
-const  mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
+const connectToMongo = async function main() {
+  await mongoose.connect(
+    'mongodb+srv://Prathamesh2002:Prathamesh2002@cluster0.yszwa96.mongodb.net/?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+    }
+  );
 
-const connectToMongo =  async function main() {
-    
- await mongoose.connect("mongodb://0.0.0.0:27017/inotebookDB", {
-        useNewUrlParser: true
-      })
-    
-      
-    console.log("connected")
-} 
+  console.log('connected');
+};
 
 module.exports = connectToMongo;
