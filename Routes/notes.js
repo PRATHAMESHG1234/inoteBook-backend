@@ -65,7 +65,7 @@ router.put('/updatenote/:id', fetchUser, async (req, res) => {
   ///find the note to be updated and update it
 
   let note = await Note.findById(req.params.id);
-  console.log('user', note.user);
+  console.log('user', note);
   if (!note) {
     res.status(404).send('Not Found');
   }
